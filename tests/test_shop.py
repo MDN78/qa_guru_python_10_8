@@ -52,7 +52,7 @@ class TestCart:
         cart.remove_product(product, 5)
         assert cart.products[product] == 1
 
-    def test_remove_non_existent_product(self, product: Product, cart: Cart):
+    def test_remove_non_existed_product(self, product: Product, cart: Cart):
         with pytest.raises(ValueError):
             cart.remove_product(product, 8)
 
